@@ -14,7 +14,7 @@ The standard Reversi board is an 8 x 8 where two players - white tiles and black
 The initial setup looks like this:
 
 
-  a b c d e f g h  
+<p>  a b c d e f g h<\p>  
 a U U U U U U U U   
 b U U U U U U U U   
 c U U U U U U U U   

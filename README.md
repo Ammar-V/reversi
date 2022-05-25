@@ -28,4 +28,12 @@ The function <code>minimax</code> is a recursive function. The first call origin
 
 ### My throughts on Minimax
 
-My first view of minimax was that it stores the location of the best move for every turn and then the computer would execute said moves. Although, this assumes that the player would always make their best move, which is not the case. Instead, minimax works by executing one valid move and then evaluating the outcome of that move n-turns into the future. It repeats this for all valid moves in a given turn. Therefore, <code>minimax</code> is called at every turn the computer has and fore each turn, it evalues the board 13 turns into the future. Due to the recursive nature of the function, the deeper the game tree (n -turns), the more resources are utilized. Inceasing the number of turns from 13 to 14 caused the program to exceed the 1 second time constraint.
+My first view of minimax was that it stores the location of the best move for every turn and then the computer would execute said moves. Although, this assumes that the player would always make their best move, which is not the case. Instead, minimax works by executing one valid move and then evaluating the outcome of that move n-turns into the future. It repeats this for all valid moves in a given turn. Therefore, <code>minimax</code> is called at every turn the computer has and for each turn, it evalues the board 13 turns into the future. Due to the recursive nature of the function, the deeper the game tree (n -turns), the more resources are utilized. Inceasing the number of turns from 13 to 14 caused the program to exceed the 1 second time constraint.
+
+### Minimax with Alpha-Beta pruning
+
+### Evaluating the board
+
+Previously, I mentioned that at the end of each minimax call, the score is calculated to get a sense of how good the origin move is. One simple and greedy way of evaluating the board, from the computer's perspective, is to <code>+1</code> for every computer tile and <code>-1</code> for every player tile. Although, Reversi is a complex game inovlving strategy where board positions are important to the outcome of a game. For example, a single move might flip over 3 of the opponents tiles which seems promising. However, that board position may allow the opponent to flip over 8 of your own tiles. A move might seem rewarding in the current turn but it may allow the opponent to gain an upper hand in future moves.
+
+To combat this, the board needs to be evaluated in a heuristic sense where certain positions are valued more than others, even if they sacrifice points in the short run. For example, in Reversi, it is crucial to capture the corners as the opponent can never re-claim that for themseleves.

@@ -14,15 +14,15 @@ The standard Reversi board is an 8 x 8 where two players - white tiles and black
 The initial setup looks like this:
 
 <code>
- a b c d e f g h
-a U U U U U U U U   
-b U U U U U U U U   
-c U U U U U U U U   
-d U U U W B U U U   
-e U U U B W U U U   
-f U U U U U U U U   
-g U U U U U U U U   
-h U U U U U U U U   
+  a b c d e f g h\n
+a U U U U U U U U \n  
+b U U U U U U U U   \n
+c U U U U U U U U   \n
+d U U U W B U U U  \n 
+e U U U B W U U U  \n 
+f U U U U U U U U  \n 
+g U U U U U U U U  \n 
+h U U U U U U U U  \n 
 </code>
 
 At the center, 4 tiles are placed in a pattern. To make a valid move, a player has to surround (or flank) the opponents tile with two of their own. For exaple: W B W.
